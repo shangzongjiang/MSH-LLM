@@ -44,6 +44,20 @@ bash ./scripts/ETTh1.sh
 bash ./scripts/m3_m4.sh
 ```
 # 5 Main results
-The proposed method outperforms other models on most tasks, including long-term forecasting, short-term forecasting, classification, few-shot learning, and zero-shot learning.
+The proposed method outperforms other models on most tasks, including [long-term forecasting](./Long-term_Forecasting/README.md), [short-term forecasting](./Short-term_Forecasting/README.md), [classification](./Classification/README.md), [few-shot learning](./Few-shot_Learning/README.md), and [zero-shot learning](./Zero-shot_Learning/README.md).
+
+## 5.1 Long-term forecasting
+![long-term forecasting](https://github.com/shangzongjiang/MSH-LLM/blob/main/figures/long-term.png)
+## 5.2 Short-term forecasting
+![short-term forecasting](https://github.com/shangzongjiang/MSH-LLM/blob/main/figures/short-term.png)
+## 5.3 Classification
+![classification](https://github.com/shangzongjiang/MSH-LLM/blob/main/figures/classification.png)
+## 5.4 Few-shot learning
+### 5.4.1 Few-shot learning results under 5% training data.
+![few-shot learning](https://github.com/shangzongjiang/MSH-LLM/blob/main/figures/5few-shot.png)
+### 5.4.1 Few-shot learning results under 10% training data.
+![few-shot learning](https://github.com/shangzongjiang/MSH-LLM/blob/main/figures/10few-shot.png)
+## 5.5 Zero-shot learning
+![zero-shot learning](https://github.com/shangzongjiang/MSH-LLM/blob/main/figures/zero-shot.png)
 
 ## 5.4 Visualization

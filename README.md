@@ -32,13 +32,16 @@ You can access the well pre-processed datasets from [[Google Drive]](https://dri
 bash ./scripts/ETTh1.sh
 
 # short-term forecasting
- 
+bash ./scripts/M4.sh
+
 # classification
 bash ./scripts/EthanolConcentration.sh
 
 #few-shot learning
+bash ./scripts/ETTh1.sh
 
 #zero-shot learning
+bash ./scripts/m3_m4.sh
 ```
 # 5 Main results
 The proposed method outperforms other models on most tasks, including long-term forecasting, short-term forecasting, classification, few-shot learning, and zero-shot learning.

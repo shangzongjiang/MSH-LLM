@@ -54,8 +54,8 @@ The proposed method outperforms other models on most tasks, including [long-term
 ![classification](https://github.com/shangzongjiang/MSH-LLM/blob/main/figures/classification.png)
 ## 5.4 Few-shot learning
 ### 5.4.1 Few-shot learning results under 5% training data.
-![few-shot learning](https://github.com/shangzongjiang/MSH-LLM/blob/main/figures/5few-shot.png)
-### 5.4.1 Few-shot learning results under 10% training data.
-![few-shot learning](https://github.com/shangzongjiang/MSH-LLM/blob/main/figures/10few-shot.png)
+![5few-shot learning](https://github.com/shangzongjiang/MSH-LLM/blob/main/figures/5few-shot.png)
+### 5.4.2 Few-shot learning results under 10% training data.
+![10few-shot learning](https://github.com/shangzongjiang/MSH-LLM/blob/main/figures/10few-shot.png)
 ## 5.5 Zero-shot learning
 ![zero-shot learning](https://github.com/shangzongjiang/MSH-LLM/blob/main/figures/zero-shot.png)

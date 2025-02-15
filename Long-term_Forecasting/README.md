@@ -22,5 +22,5 @@ bash ./scripts/electricity.sh
 # Train on Weather
 bash ./scripts/weather.sh
 ```
-# Full results of Long-term forecasting
+# Full results of long-term forecasting
 ![full results of Long-term forecasting](https://github.com/shangzongjiang/MSH-LLM/blob/main/figures/full-long.png)

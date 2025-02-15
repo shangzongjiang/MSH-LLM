@@ -59,5 +59,3 @@ The proposed method outperforms other models on most tasks, including [long-term
 ![few-shot learning](https://github.com/shangzongjiang/MSH-LLM/blob/main/figures/10few-shot.png)
 ## 5.5 Zero-shot learning
 ![zero-shot learning](https://github.com/shangzongjiang/MSH-LLM/blob/main/figures/zero-shot.png)
-
-## 5.4 Visualization

@@ -11,3 +11,13 @@ MSH-LLM focuses on reprogramming an embedding-visible large language model, e.g.
 * math, sklearn, numpy, torch_geometric
 
 # 3 Datasets && Description
+
+# 4 Running
+## 4.1 Install all dependencies listed in prerequisites
+
+## 4.2 Download the dataset
+
+## 4.3 Training
+# 5 Main results
+
+## 5.4 Visualization

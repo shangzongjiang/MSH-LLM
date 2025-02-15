@@ -10,6 +10,6 @@
 # Train on M4
 bash ./scripts/M4.sh
 ```
-# Full results of Short-term forecasting
+# Full results of short-term forecasting
 ![full results of Long-term forecasting](https://github.com/shangzongjiang/MSH-LLM/blob/main/figures/full-shot.png)
 

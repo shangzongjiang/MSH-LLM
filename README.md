@@ -37,11 +37,12 @@ bash ./scripts/M4.sh
 # classification
 bash ./scripts/EthanolConcentration.sh
 
-#few-shot learning
+# few-shot learning
 bash ./scripts/ETTh1.sh
 
-#zero-shot learning
+# zero-shot learning
 bash ./scripts/m3_m4.sh
+bash ./scripts/m4_m3.sh
 ```
 # 5 Main results
 The proposed method outperforms other models on most tasks, including [long-term forecasting](./Long-term_Forecasting/README.md), [short-term forecasting](./Short-term_Forecasting/README.md), [classification](./Classification/README.md), [few-shot learning](./Few-shot_Learning/README.md), and [zero-shot learning](./Zero-shot_Learning/README.md).

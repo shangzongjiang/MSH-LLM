@@ -24,6 +24,23 @@ You can access the well pre-processed datasets from [[Google Drive]](https://dri
 ## 4.2 Download the dataset
 
 ## 4.3 Training
+🚀 We provide experiment scripts for demonstration purpose under the folder `./scripts`. 
+```
+# the default large language model is LLaMA-7B
+
+# long-term forecasting
+bash ./scripts/ETTh1.sh
+
+# short-term forecasting
+ 
+# classification
+bash ./scripts/EthanolConcentration.sh
+
+#few-shot learning
+
+#zero-shot learning
+```
 # 5 Main results
+The proposed method outperforms other models on most tasks, including long-term forecasting, short-term forecasting, classification, few-shot learning, and zero-shot learning.
 
 ## 5.4 Visualization

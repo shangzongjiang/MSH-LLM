@@ -296,6 +296,8 @@ class Model(nn.Module):
                 f"max value {max_values_str}, "
                 f"median value {median_values_str}, "
                 "think about it step by step."
+                "that is really important for me."
+                "Considering ARIMA (AutoRegressive Intergrated Moving Average)."
             )
 
             prompt.append(prompt_)

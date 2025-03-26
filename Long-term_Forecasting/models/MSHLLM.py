@@ -283,28 +283,35 @@ class Model(nn.Module):
         medians = torch.median(x, dim=1).values
         prompt = []
         # prompt = []
+        capability_prompt=[]
         # prompt=prompt.to(x_enc.device)
+        scale_num=len(self.hyper_num1)
         for b in range(x.shape[0]):
             min_values_str = str(min_values[b].tolist()[0])
             max_values_str = str(max_values[b].tolist()[0])
             median_values_str = str(medians[b].tolist()[0])
             prompt_ = (
                 f"<|start_prompt|>Dataset description: {self.description}"
-                f"Task description: forecast the next {str(self.pred_len)} steps given the previous {str(self.seq_len)} steps information; "
-                "Input statistics: "
-                f"min value {min_values_str}, "
-                f"max value {max_values_str}, "
-                f"median value {median_values_str}, "
-                "think about it step by step."
-                "that is really important for me."
-                "Considering ARIMA (AutoRegressive Intergrated Moving Average)."
+                f"Task Instruction: forecast the next {str(self.pred_len)} steps given the previous {str(self.seq_len)} steps information; "
+                "Data statistics: "
+                f"The number of scale is  {scale_num}, "
+                f"the max value is {max_values_str}, "
+                f"the min value is {min_values_str}, "
+                f"median value is {median_values_str}. "
             )
 
             prompt.append(prompt_)
+        Cprompt_=("Think about it step by step."
+                "That's really important for me."
+                "Considering ARIMA (AutoRegressive Intergrated Moving Average).")
+        capability_prompt.append(Cprompt_)
         # x_enc = x.reshape(B, N, T).permute(0, 2, 1).contiguous()
         x_enc=x
-        prompt = self.tokenizer(prompt, return_tensors="pt", padding=True, truncation=True, max_length=1024).input_ids
-        prompt_embeddings = self.llm_model.get_input_embeddings()(prompt.to(x_enc.device))
+        data_prompt = self.tokenizer(prompt, return_tensors="pt", padding=True, truncation=True, max_length=1024).input_ids
+        capability_prompt = self.tokenizer(prompt, return_tensors="pt", padding=True, truncation=True, max_length=1024).input_ids
+        Dprompt_embeddings = self.llm_model.get_input_embeddings()(data_prompt.to(x_enc.device))[:, :data_prompt.shape[1] // 2, :]
+        Cprompt_embeddings = self.llm_model.get_input_embeddings()(capability_prompt.to(x_enc.device))[:, :capability_prompt.shape[1] // 2, :]
+        prompt_embeddings=torch.cat([Dprompt_embeddings, Cprompt_embeddings], dim=1)
         source_embeddings = self.mapping_layer(self.word_embeddings.permute(1, 0)).permute(1, 0)
         adj_matrix = self.multiadphyper(x_enc)
 

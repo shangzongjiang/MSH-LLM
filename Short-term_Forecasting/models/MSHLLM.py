@@ -30,9 +30,6 @@ import math
 
 
 
-"""
-ASHyper不加特征维度转换版本，原始多少维就是多少维，加loss约束
-"""
 class Model(nn.Module):
     """
     Normalization-Linear
